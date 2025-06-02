@@ -4,22 +4,18 @@ using UnityEngine.InputSystem;
 public class Movement : MonoBehaviour
 {
     [Header("Input Actions")]
-    [SerializeField]
-    private InputAction thrust;
-    [SerializeField]
-    private InputAction rotation;
+    [SerializeField] private InputAction thrust;
+    [SerializeField] private InputAction rotation;
 
     [Header("Thruster Settings")]
-    [SerializeField]
-    private float thrustAmount = 0f;
+    [SerializeField] private float thrustAmount = 0f;
 
     [Header("Rotation Settings")]
-    [SerializeField]
-    private float rotationAmount = 0f;
+    [SerializeField] private float rotationAmount = 0f;
 
     [Header("Audio Settings")]
-    [SerializeField]
-    private AudioSource RockeyAudioSource;
+    [SerializeField] private AudioSource RockeyAudioSource;
+    [SerializeField] private AudioClip MainEngineSoundClip;
 
     private Rigidbody rb;
 
@@ -47,7 +43,7 @@ public class Movement : MonoBehaviour
             rb.AddRelativeForce(Vector3.up * thrustAmount * Time.fixedDeltaTime, ForceMode.Force);
 
             if (!RockeyAudioSource.isPlaying)
-                RockeyAudioSource.Play(0);
+                RockeyAudioSource.PlayOneShot(MainEngineSoundClip);
         }
         else
         {
@@ -70,4 +66,15 @@ public class Movement : MonoBehaviour
             //you can use freezeRotation in else or you can use in the above one, either is good. But use only one, don't use both.
         }
     }
+
+    void OnDisable()
+    {
+        RockeyAudioSource.Stop();
+    }
+
+    /*public void DisablePlayerMovement()
+    {
+
+        RockeyAudioSource.Stop();
+    }*/
 }
