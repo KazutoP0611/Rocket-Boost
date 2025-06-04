@@ -9,6 +9,9 @@ public class Movement : MonoBehaviour
 
     [Header("Thruster Settings")]
     [SerializeField] private float thrustAmount = 0f;
+    [SerializeField] private ParticleSystem ThrustParticle;
+    [SerializeField] private ParticleSystem LeftThrustParticle;
+    [SerializeField] private ParticleSystem RightThrustParticle;
 
     [Header("Rotation Settings")]
     [SerializeField] private float rotationAmount = 0f;
@@ -44,10 +47,14 @@ public class Movement : MonoBehaviour
 
             if (!RockeyAudioSource.isPlaying)
                 RockeyAudioSource.PlayOneShot(MainEngineSoundClip);
+
+            if (!ThrustParticle.isPlaying)
+                ThrustParticle.Play();
         }
         else
         {
             RockeyAudioSource.Stop();
+            ThrustParticle.Stop();
         }
     }
 
@@ -59,10 +66,23 @@ public class Movement : MonoBehaviour
             rb.freezeRotation = true;
             transform.Rotate(Vector3.forward * -rotationInput * rotationAmount * Time.fixedDeltaTime);
             //rb.freezeRotation = false;
+
+            if (rotationInput < 0 && !LeftThrustParticle.isPlaying)
+            {
+                RightThrustParticle.Stop();
+                LeftThrustParticle.Play();
+            }
+            else if (rotationInput > 0 && !RightThrustParticle.isPlaying)
+            {
+                LeftThrustParticle.Stop();
+                RightThrustParticle.Play();
+            }
         }
         else
         {
             rb.freezeRotation = false;
+            LeftThrustParticle.Stop();
+            RightThrustParticle.Stop();
             //you can use freezeRotation in else or you can use in the above one, either is good. But use only one, don't use both.
         }
     }
@@ -70,11 +90,9 @@ public class Movement : MonoBehaviour
     void OnDisable()
     {
         RockeyAudioSource.Stop();
+
+        ThrustParticle.Stop();
+        LeftThrustParticle.Stop();
+        RightThrustParticle.Stop();
     }
-
-    /*public void DisablePlayerMovement()
-    {
-
-        RockeyAudioSource.Stop();
-    }*/
 }
