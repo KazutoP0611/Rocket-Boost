@@ -6,6 +6,13 @@ You control a rocket that moves only along the X and Y axes — there is no dept
 
 <img width="854" height="480" alt="image" src="https://github.com/user-attachments/assets/2b1ecdea-78cc-4f09-93e8-3db77536ee8e" />
 
+#### ⚙️ Technical Highlights
+- Engine: Unity 6 (6000.0.49f1)
+- Programming Language: C#
+- Physics-based movement using Rigidbody (3D)
+- Manual thrust force application
+- Collision detection with instant fail state
+- Scene-based level progression
 
 #### 🎥 Game Video
 [Watch Gameplay Video](https://youtu.be/kVP1K6R4iCs)
