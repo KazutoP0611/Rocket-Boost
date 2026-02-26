@@ -35,13 +35,11 @@ There are no health points and no checkpoints — one collision means **GAME OVE
 
 ## 🎮 Controls
 - **Spacebar** – Apply upward thrust
-
-<img width="854" height="480" alt="image" src="https://github.com/user-attachments/assets/680a2704-e3d1-4f2c-b422-fb32534e6050" />
+  <img width="854" height="480" alt="image" src="https://github.com/user-attachments/assets/680a2704-e3d1-4f2c-b422-fb32534e6050" />
 
 - **A / D** – Rotate the rocket on the Z axis
-
-<img width="854" height="480" alt="image" src="https://github.com/user-attachments/assets/2a9f639e-e22f-432e-9fa8-cec6c516af60" />
-<img width="854" height="480" alt="image" src="https://github.com/user-attachments/assets/5e4f638e-b270-4a6d-90df-054e2c0b93d6" />
+  <img width="854" height="480" alt="image" src="https://github.com/user-attachments/assets/2a9f639e-e22f-432e-9fa8-cec6c516af60" />
+  <img width="854" height="480" alt="image" src="https://github.com/user-attachments/assets/5e4f638e-b270-4a6d-90df-054e2c0b93d6" />
 
 The rocket moves in the direction its nose is pointing.
 
