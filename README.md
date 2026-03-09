@@ -1,5 +1,10 @@
 # Rocket Boost (2.5D Precision Platformer)
 
+## 🎥 Game Video
+[Watch Gameplay Video](https://youtu.be/kVP1K6R4iCs)
+
+---
+
 #### 🚀 Rocket Boost Game
 Rocket Boost is a physics-based 2.5D control challenge inspired by classic arcade-style movement games. I built this project while learning, with a focus on precision movement and level design.
 You control a rocket that moves only along the X and Y axes — there is no depth movement. Positioning and precision are everything.
@@ -15,11 +20,6 @@ You control a rocket that moves only along the X and Y axes — there is no dept
 - Manual thrust force application
 - Collision detection with instant fail state
 - Scene-based level progression
-
----
-
-## 🎥 Game Video
-[Watch Gameplay Video](https://youtu.be/kVP1K6R4iCs)
 
 ---
 
