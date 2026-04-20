@@ -5,6 +5,11 @@
 
 ---
 
+## 🎮 Play this game
+[Play on itch.io](https://panutatr.itch.io/rocket-boost)
+
+---
+
 ## 🚀 Rocket Boost Game
 Rocket Boost is a physics-based 2.5D control challenge inspired by classic arcade-style movement games. I built this project while learning, with a focus on precision movement and level design.
 You control a rocket that moves only along the X and Y axes — there is no depth movement. Positioning and precision are everything.
